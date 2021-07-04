@@ -1,7 +1,8 @@
 <div class="modal-header">
-    <label class="modal-title">{{isEditing ? 'Edit':'Preview'}} image </label>
-    <label class="clickable-label reupload" (click)="reuploadImage()">Reupload Image</label>
-
+    <div>
+        <label class="modal-title">{{isEditing ? 'Edit':'Preview'}} image </label>
+        <label class="clickable-label reupload" (click)="reuploadImage()">Reupload Image</label>
+    </div>
     <button class="close-btn" (click)="cancel()"> <span>x</span> </button>
 </div>
 <div class="file-container">
