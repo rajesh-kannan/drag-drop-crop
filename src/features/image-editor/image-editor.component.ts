@@ -33,7 +33,7 @@ export class ImageEditorComponent implements AfterViewInit {
 
         setTimeout(() => { // settimeout added so that the image gets painted before accessing
           this.cropper = new Cropper(this.imageElement.nativeElement, {
-            zoomable: false,
+            zoomable: true,
             aspectRatio: 1,
             crop: () => {
               const canvas = this.cropper.getCroppedCanvas();
