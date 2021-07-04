@@ -1,0 +1,30 @@
+.center {
+    top: 50%;
+    position: relative;
+    padding: 5px 100px;
+}
+
+.left-div {
+    float: left;
+    margin-right: 8px;
+}
+
+.upload-icon {
+    width: 45px;
+    background-color: #e2f1fe;
+    border-radius: 20px;
+}
+
+.note {
+    font-size: 12px;
+    color: #97979c;
+}
+
+.error-container {
+    padding: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+}

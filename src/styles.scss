@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.file-container {
+    height: 300px;
+    border: 3px dotted gray;
+    border-color: #d4d4de;
+    background-color: #f8f8ff;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button {
+    margin: 5px !important;
+}
+
+.clickable-label {
+    cursor: pointer;
+    color: #3b9dfb;
+}
+
+.close-btn {
+    font-size: 25px;
+    border: none;
+    color: grey;
+    background: transparent;
+}
+
+.modal-title {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.modal-header {
+    padding: 5px;
+}
+
+.center-btn {
+    display: grid;
+    justify-content: center;
+}

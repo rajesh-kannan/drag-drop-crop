@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <label class="modal-title">Upload image</label>
+    <button class="close-btn" (click)="hide()"> <span>x</span> </button>
+</div>
+<div>
+    <div class="file-container" (drop)="fileSelectHandler($event)" (dragover)="preventEvent($event)">
+        <input id="file" hidden type="file" accept=".jpeg,.png,.tiff" [multiple]="false"
+            (change)="fileSelectHandler($event)">
+        <div class="center">
+            <div class="left-div">
+                <img class="upload-icon" src="../../assets/upload.png">
+            </div>
+            <div>
+                <label for="file" class="clickable-label">Upload file</label> or just drag and drop image here
+                <p class="note">Supported formats: jpeg, png, tiff </p>
+            </div>
+            <div class="error-container" *ngIf="invalidFileFormat">
+                <label class="error">* Invalid File Format</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button mat-flat-button (click)="hide()"> Cancel </button>
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="fileToDisplay" class="image-container">
+    <label class="block" [title]="fileToDisplay.name">{{fileToDisplay.name | fileName : 25}}</label>
+    <img [src]="fileToDisplay.src">
+</div>
+
+<div class="center-btn">
+    <button mat-raised-button (click)="showFileUploadModal()">Upload</button>
+</div>
+
+<ng-template #fileUpload>
+    <app-file-upload (fileUpload)="handleFileUpload($event)" (close)="closeModal()"></app-file-upload>
+</ng-template>
+
+<ng-template #imageEditor>
+    <app-image-editor #imageEditor [file]="uploadedFile" (close)="closeModal()" (save)="displayEditedImage($event)"
+        (reupload)="reupload()">
+    </app-image-editor>
+</ng-template>

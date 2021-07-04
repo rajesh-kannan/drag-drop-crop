@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <label class="modal-title">{{isEditing ? 'Edit':'Preview'}} image </label>
+    <label class="clickable-label reupload" (click)="reuploadImage()">Reupload Image</label>
+
+    <button class="close-btn" (click)="cancel()"> <span>x</span> </button>
+</div>
+<div class="file-container">
+    <div [class.hide]="!isEditing" class="edit-container">
+        <img #image [src]="imgSrc">
+    </div>
+    <div [class.hide]="isEditing" class="preview-container">
+        <img [src]="imgPreviewSrc">
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="pull-left">
+        <button mat-raised-button *ngIf="isEditing" (click)="isEditing = false">Preview</button>
+        <button mat-raised-button *ngIf="!isEditing" (click)="isEditing = true">Back</button>
+    </div>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button (click)="saveChanges()">Save Changes</button>
+</div>
